@@ -8,7 +8,7 @@ helpers do
 end
 
 get('/') do
-  erb :index, { locals: { data: generate_data }}
+  erb :index
 end
 
 get('/json_endpoint') do
