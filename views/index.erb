@@ -2,26 +2,27 @@
     "http://www.w3.org/TR/html4/strict.dtd">
 <head>
 
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="jquery.sparkline.js"></script>
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="jquery.sparkline.js"></script>
 
-    <script type="text/javascript">
-    $(function() {				
-		setInterval(function() {
-            $.ajax({
-                type: 'GET',
-                url: 'json_endpoint',
-                dataType: 'json',
-                aysync: true,
-                success: function(data) {
-					$('.dynamicsparkline').sparkline(data);
-                }
-            });
-		}, 500); 
-    });
-    </script>
+  <script type="text/javascript">
+  $(function() {				
+    setInterval(function() {
+      $.ajax({
+          type: 'GET',
+          url: 'json_endpoint',
+          dataType: 'json',
+          aysync: true,
+          success: function(data) {
+  	         $('.dynamicsparkline').sparkline(data);
+            }
+          });
+    }, 500); 
+  });
+  </script>
 </head>
+
 <body>
-<p>Sparkline with dynamic data: <span class="dynamicsparkline">Loading..</span></p>
+  <p>Sparkline with dynamic data: <span class="dynamicsparkline">Loading..</span></p>
 </body>
 </html>
