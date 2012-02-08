@@ -3,7 +3,7 @@ require 'sinatra'
 
 helpers do
   def generate_data
-    (0..50).to_a.map { rand(100) }
+    Array.new(50).map { rand(100) }
   end
 end
 
